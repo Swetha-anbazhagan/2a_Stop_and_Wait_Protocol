@@ -13,6 +13,7 @@ To write a python program to perform stop and wait protocol
 ## PROGRAM
 
 ## Cilent.py
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -28,15 +29,16 @@ while True:
     else:
         c.close()
         break
-        
+```        
 ## Server.py
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
     print(s.recv(1024).decode())
     s.send("Acknowledgement Recived".encode())
-
+```
 ## OUTPUT
 
 <img width="1372" height="222" alt="image" src="https://github.com/user-attachments/assets/18e262a8-d675-4ac1-9916-05ba1e1b0584" />
